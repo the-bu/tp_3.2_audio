@@ -12,13 +12,13 @@
     <meta name="description" content="H+是一个完全响应式，基于Bootstrap3最新版本开发的扁平化主题，她采用了主流的左右两栏式布局，使用了Html5+CSS3等现代技术">
 
     <link rel="shortcut icon" href="favicon.ico">
-    <link href="/Public/admin/static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
-    <link href="/Public/admin/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
-    <link href="/Public/admin/static/css/plugins/iCheck/custom.css" rel="stylesheet">
-    <link href="/Public/admin/static/css/animate.css" rel="stylesheet">
-    <link href="/Public/admin/static/css/style.css?v=4.1.0" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/Public/admin/static/css/plugins/webuploader/webuploader.css">
-    <link rel="stylesheet" type="text/css" href="/Public/admin/static/css/demo/webuploader-demo.css">
+    <link href="/tp_3.2_audio/Public/admin/static/css/bootstrap.min.css?v=3.3.6" rel="stylesheet">
+    <link href="/tp_3.2_audio/Public/admin/static/css/font-awesome.css?v=4.4.0" rel="stylesheet">
+    <link href="/tp_3.2_audio/Public/admin/static/css/plugins/iCheck/custom.css" rel="stylesheet">
+    <link href="/tp_3.2_audio/Public/admin/static/css/animate.css" rel="stylesheet">
+    <link href="/tp_3.2_audio/Public/admin/static/css/style.css?v=4.1.0" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/tp_3.2_audio/Public/admin/static/css/plugins/webuploader/webuploader.css">
+    <link rel="stylesheet" type="text/css" href="/tp_3.2_audio/Public/admin/static/css/demo/webuploader-demo.css">
 </head>
 
 <body class="gray-bg">
@@ -206,18 +206,18 @@
 </div>
 
 <!-- 全局js -->
-<script src="/Public/admin/static/js/jquery.min.js?v=2.1.4"></script>
-<script src="/Public/admin/static/js/bootstrap.min.js?v=3.3.6"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/jquery.min.js?v=2.1.4"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/bootstrap.min.js?v=3.3.6"></script>
 
-<script src="/Public/admin/static/js/plugins/webuploader/webuploader.min.js"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/plugins/webuploader/webuploader.min.js"></script>
 
-<script src="/Public/admin/static/js/demo/webuploader-demo.js"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/demo/webuploader-demo.js"></script>
 
 <!-- 自定义js -->
-<script src="/Public/admin/static/js/content.js?v=1.0.0"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/content.js?v=1.0.0"></script>
 
 <!-- iCheck -->
-<script src="/Public/admin/static/js/plugins/iCheck/icheck.min.js"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/plugins/iCheck/icheck.min.js"></script>
 
 
 <script>
@@ -231,7 +231,7 @@
     });
 </script>
 <!-- layerDate plugin javascript -->
-<script src="/Public/admin/static/js/plugins/layer/laydate/laydate.js"></script>
+<script src="/tp_3.2_audio/Public/admin/static/js/plugins/layer/laydate/laydate.js"></script>
 <script>
     //外部js调用
     laydate({
@@ -275,7 +275,7 @@
 <!-- Web Uploader -->
 <script type="text/javascript">
     // 添加全局站点信息
-    var BASE_URL = '/Public/admin/static/js/plugins/webuploader';
+    var BASE_URL = '/tp_3.2_audio/Public/admin/static/js/plugins/webuploader';
 </script>
 
 

@@ -1,5 +1,13 @@
 TYNIINT
 
+开发域名:t3.com
+
+登陆测试地址:http://t3.com/index.php/Admin/login
+
+用户名:admin  
+
+密码:888
+
 # 开发tp3.2后台开发文档
 
 1.配置服务器, 更改域名;

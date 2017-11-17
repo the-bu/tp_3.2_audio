@@ -1,0 +1,12 @@
+Array
+(
+    [file] => Array
+        (
+            [name] => 2.jpg
+            [type] => image/jpeg
+            [tmp_name] => C:\Windows\phpAC5.tmp
+            [error] => 0
+            [size] => 125970
+        )
+
+)

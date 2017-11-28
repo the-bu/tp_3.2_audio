@@ -33,14 +33,17 @@
             <p>创建一个H+新账户</p>
             <form class="m-t" role="form" action="{:U('register/index')}" method="post">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="请输入用户名" required="" name="username">
+                    <input type="text" class="form-control username" placeholder="请输入用户名" required="" name="username">
                 </div>
+                <p class="verify_u" style="display: none"></p>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="请输入密码" required="" name="password1">
                 </div>
+                <p class="verify_p" style="display: none"></p>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="请再次输入密码" required="" name="password2">
                 </div>
+                <p class="verify_same" style="display: none"></p>
                 <div class="form-group text-left">
                     <div class="checkbox i-checks">
                         <label class="no-padding">
@@ -56,11 +59,67 @@
         </div>
     </div>
 
+
     <!-- 全局js -->
-    <script src="js/jquery.min.js?v=2.1.4"></script>
-    <script src="js/bootstrap.min.js?v=3.3.6"></script>
+    <script src="__ADMIN__/js/jquery.min.js?v=2.1.4"></script>
+    <script src="__ADMIN__/js/bootstrap.min.js?v=3.3.6"></script>
     <!-- iCheck -->
-    <script src="js/plugins/iCheck/icheck.min.js"></script>
+    <script src="__ADMIN__/js/plugins/iCheck/icheck.min.js"></script>
+
+
+    <script>
+     //正则检测两次输入的密码是否一样
+            $(":input[name=password2]").blur(function()//鼠标离开框2后
+            {
+                var password1 = $(this).parents().find(":input[name=password1]").val();//通过p2的祖先当下抓元素,获取输入框内容
+                var password2 = $(this).val();
+                if (password1 != password2)//如果框1不等于框2
+                {
+                    $('.verify_same').html('<P style="color: red">两次输入的密码不一致, 请重新输入</P>').show();//将隐藏提示显示
+                }else//否则隐藏
+                {
+                    $('.verify_same').hide();
+                }
+
+            })
+     //用正则检测密码
+            $(":input[name=password1]").blur(function(){
+                var preg = /^(\w){5,10}$/;//定义密码正则
+                var data = $(this).val()//获取输入框内容
+                if(!preg.test(data))//正则匹配,如果不相等
+                {
+                    $('.verify_p').html('<P style="color: red">只能输入5-10个字母、数字、下划线</P>').show();
+                }else
+                {
+                    $('.verify_p').hide();
+                }
+            })
+     //用户名异步检测
+            $('.username').blur(function(){
+                var  data = $(this).val();
+                $.ajax({
+                    url:"{:U('Interfaces/username')}",
+                    //url写完之后，需要打开network查看异步发送是否正常
+                    //如果请求正常也正常打印出数据，那么接着往下
+                    type:'post',//请求类型，post方式进行请求
+                    data:{'username':data},//请求数据
+                    dataType:'json',//发返回的数据类型
+                    success:function(res)
+                    {
+                        if (res==1)
+                        {
+                            $('.verify_u').html('<P style="color: red">用户名已存在</P>').show();
+                        }else
+                        {
+                            $('.verify_u').hide();
+                        }
+                    }
+                });
+            })
+
+
+
+    </script>
     <script>
         $(document).ready(function () {
             $('.i-checks').iCheck({

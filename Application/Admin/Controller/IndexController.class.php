@@ -6,5 +6,6 @@ class IndexController extends CommonConterller {
 
     	//载入视图
         $this-> display();
+
     }
 }
